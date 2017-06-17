@@ -13,7 +13,6 @@ PokeWater::PokeWater(int pokemonID, const std::string& name)
 	}
 
 PokeWater::~PokeWater(){
-	//name.std::string::~string();
 }
 
 void PokeWater::setDrowning(bool drowning){

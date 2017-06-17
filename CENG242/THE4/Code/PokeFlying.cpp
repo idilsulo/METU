@@ -12,7 +12,6 @@ PokeFlying::PokeFlying(int pokemonID, const std::string& name)
 	}
 
 PokeFlying::~PokeFlying(){
-	//name.std::string::~string();
 }
 
 void PokeFlying::setBurning(bool burning){

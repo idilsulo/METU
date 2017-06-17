@@ -13,7 +13,6 @@ PokeFire::PokeFire(int pokemonID, const std::string& name)
 	}
 
 PokeFire::~PokeFire(){
-	//name.std::string::~string();
 }
 
 void PokeFire::setBurning(bool burning){

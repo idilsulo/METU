@@ -8,19 +8,7 @@ Tournament::Tournament(const std::string& tournamentName){
 }
 
 Tournament::~Tournament(){
-	
-	/*for(int i=0; i < competitors.size(); i++){
-			//competitors[i]->Trainer::~Trainer();
-			delete competitors[i];
-		}
-	
-	
-	for(int i=0; i < winners.size(); i++){
-			//winners[i]->Trainer::~Trainer();
-		delete winners[i];
-		}
-	*/
-	//tournamentName.std::string::~string();
+
 }
 
 void Tournament::registerTrainers(const std::vector<Trainer*>& trainers){
@@ -57,7 +45,7 @@ Trainer* Tournament::commence(){
 	commence();
 	}
 	else{
-		//std::cout << competitors.front()-> << std::endl;
+
 		Trainer* Winner = competitors.front();
 		return Winner;
 	}

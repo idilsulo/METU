@@ -14,7 +14,6 @@ PokeGrass::PokeGrass(int pokemonID, const std::string& name)
 	}
 
 PokeGrass::~PokeGrass(){
-	//name.std::string::~string();
 }
 
 void PokeGrass::setRooted(bool rooted){

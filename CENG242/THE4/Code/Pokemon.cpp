@@ -19,7 +19,7 @@ Pokemon::Pokemon(int pokemonID, const std::string& name){
 }
 
 Pokemon::~Pokemon(){
-	//name.std::string::~string();
+
 }
 
 /* Getters */

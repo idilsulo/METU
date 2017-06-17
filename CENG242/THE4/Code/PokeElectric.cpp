@@ -13,7 +13,6 @@ PokeElectric::PokeElectric(int pokemonID, const std::string& name)
 	}
 
 PokeElectric::~PokeElectric(){
-	//name.std::string::~string();
 }
 
 void PokeElectric::setElectrified(bool electrified){
