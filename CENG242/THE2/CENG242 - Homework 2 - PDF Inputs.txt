@@ -1,0 +1,114 @@
+CENG242 - Homework 2 - PDF Inputs
+-------------------------------------------------------------------------
+
+3.2 WordTree as an Instance of Show
+
+emptyTree
+show emptyTree
+
+Root [ Word "Dam" , Word "Plane" , Word "Ship" ]
+
+Root [Subword "Da" [Subword "m" [Word "", Subword "ag" [Word "e", Word "ing"]], Word "rk"]]
+
+Root [Subword "Ca" [Subword "n" [Word "", Word "teen"], Word "ptain", Subword "r" [Word "", Subword "r" [Subword "ie" [Word "d", Word "s"], Word "y"]]], Subword "He" [Word "ck", Subword "l" [Word "lo", Subword "p" [Word "", Subword "e" [Word "d", Word "r"], Word "ing"]]]]
+
+
+
+3.3 getAllPaths
+
+getAllPaths emptyTree
+
+
+let exampleTree1 = Root [Word "Hello", Word "World"]
+
+getAllPaths exampleTree1
+
+
+let exampleTree2 = Root [Subword "Hel" [Word "lo", Word "p" ]]
+
+getAllPaths exampleTree2
+
+
+let test1 = Root [Subword "He" [Word "ck", Subword "l" [Word "lo", Subword "p" [Word "", Subword "e" [Word "d", Word "r"] , Word "ing"]]]]
+
+getAllPaths test1
+
+
+let test2 = Root [Subword "Ca" [Subword "n" [Word "", Word "teen"], Word "ptain", Subword "r" [Word "", Subword "r" [Subword "ie" [Word "d", Word "s"], Word "y"]]], Subword "He" [Word "ck", Subword "l" [Word "lo", Subword "p" [Word "", Subword "e" [Word "d", Word "r"], Word "ing"]]]]
+
+getAllPaths test2
+
+
+let test3 = Root [Subword "F" [Word "alse", Subword "i" [Word "asco", Word "le"]], Subword "Re" [Word "aper", Subword "po" [Word "", Word "sitory"]], Subword "T" [Subword "a" [Subword "il" [Word "", Word "or"], Word "p"], Word "esla"]]
+
+getAllPaths test3
+
+
+
+3.4 addWords
+ 
+let tree1 = addWords emptyTree []
+
+let tree2 = addWords emptyTree ["Hello"]
+
+let tree3 = addWords tree2 [ "World" , "Help"]
+
+let tree4 = addWords tree2 ["Hi"]
+
+let tree5 = addWords emptyTree [ "Helper" , "Help" , "Helped" , "Helping", "Hello" , "Heck"]
+
+let tree6 = addWords emptyTree ["Helper" , "Help" , "Helped" , "Helping", "Hello", "Heck", "Car", "Carry", "Can", "Carries", "Carried", "Captain", "Canteen"]
+
+let tree7 = addWords emptyTree ["File", "Repository" , "Repo" , "Reaper", "False", "Fiasco", "Tail", "Tailor", "Tap", "Tesla"]
+
+let tree8 = addWords tree2 ["Helper", "Help", "Helped", "Helping", "Hello", "Heck"]
+
+let tree9 = addWords tree4 ["Helper", "Help", "Helped", "Helping", "Hello", "Heck", "Car", "Carry", "Can", "Carries", "Carried", "Captain", "Canteen"]
+
+let tree10 = addWords tree6 ["File", "Repository", "Repo" , "Reaper", "False", "Fiasco", "Tail", "Tailor", "Tap", "Tesla"]
+
+3.5 deleteWords
+
+deleteWords emptyTree [ ]
+deleteWords emptyTree ["Hello"]
+deleteWords tree2 [ ]
+deleteWords tree2 ["Hello"]
+deleteWords tree3 ["Help"]
+deleteWords tree3 ["World"]
+deleteWords tree3 ["World"]
+deleteWords tree3 ["World", "Help"]
+deleteWords tree3 ["World", "Help", "Hello"]
+
+Trees given in the addwords section is used
+deleteWords tree6 ["Car", "Carry", "Can" , "Carries", "Carried", "Captain", "Canteen"]
+deleteWords tree10 [ "Reaper" , "Repo" , "Carries" , "Can" ]
+
+let tree11 = addWords emptyTree [ "Car" , "Carpenter"]
+deleteWords tree11 [ "Car" ]
+
+let tree12 = addWords emptyTree ["Can" ,"Car" ,"Canopy"]
+deleteWords tree12 [ "Car" ]
+
+3.6 getWordsBeginWith
+
+getWordsBeginWith tree5 "H"
+
+getWordsBeginWith tree5 "Helpe"
+
+getWordsBeginWith tree6 ""
+
+getWordsBeginWith tree7 "F"
+
+getWordsBeginWith tree7 "Rea"
+
+getWordsBeginWith tree7 "Ta"
+
+getWordsBeginWith tree7 "T"
+
+getWordsBeginWith tree10 "Re"
+
+getWordsBeginWith tree10 "Tail"
+
+getWordsBeginWith tree10 "Help"
+
+getWordsBeginWith tree10 "Carr"
