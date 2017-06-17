@@ -1,3 +1,2 @@
 # METU
-Finished coursework:
-  CENG242
+Finished coursework consisting of take-home exams i.e. THE's
