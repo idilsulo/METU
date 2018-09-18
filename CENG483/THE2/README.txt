@@ -8,5 +8,7 @@ File list:
 - img_to_vec.py: Class definition that provides feature extraction from Resnet18.
 - test.jpg: Test image for feature extraction script.
 - the2.pdf: Homework text.
+- the2.py: Source code
+- the2_paper.pdf: Project report
 - train.tar.gz: Training images.
 - valid.tar.gz: Validation images.
